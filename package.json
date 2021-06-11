@@ -1,0 +1,20 @@
+{
+  "name": "weeee.js",
+  "version": "1.0.0",
+  "description": "Tiny Javascript tweening engine",
+  "main": "weeee.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sfi0zy/weeee.git"
+  },
+  "keywords": [
+    "animation",
+    "tween"
+  ],
+  "author": "Ivan Bogachev <sfi0zy@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/sfi0zy/weeee/issues"
+  },
+  "homepage": "https://sfi0zy.github.io/weeee/"
+}

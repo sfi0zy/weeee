@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Weeee.js - Tiny Javascript tweening engine</title>
+
+
+
+        <link rel='stylesheet' href='https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&display=swap'>
+        <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css'>
+
+
+
+        <style>
+
+            html {
+                font-family: 'Noto Sans JP', sans-serif;
+                color: #222222;
+            }
+
+
+            body {
+                text-align: center;
+            }
+
+
+            h1 {
+                margin: 2rem auto 1rem;
+            }
+
+
+            p {
+                margin: 1rem auto;
+            }
+
+
+            a {
+                color: #5bc0eb;
+                text-decoration: underline;
+                transition: color 100ms cubic-bezier(.8, .1, .5, .8);
+            }
+
+
+            a:hover,
+            a:focus {
+                color: #3d7f9c;
+            }
+
+
+            .cube {
+                position: relative;
+                height: 5rem;
+                width: 5rem;
+                margin: 2rem auto;
+                background: #9bc53d;
+                border-radius: .5rem;
+                transform: scale(0);
+            }
+
+            .eye {
+                position: absolute;
+                top: .75rem;
+                height: 1.5rem;
+                width: 1.5rem;
+                line-height: 1.3rem;
+                color: #fcbe21;
+                background: #ffffff;
+                border-radius: 50%;
+            }
+
+            .eye:first-of-type {
+                left: .75rem;
+            }
+
+            .eye:last-of-type {
+                right: .75rem;
+            }
+
+
+            pre {
+                text-align: left;
+            }
+
+
+            code {
+                display: block;
+                margin: 2rem auto;
+                width: 35rem;
+                padding: 1rem;
+                background: #ebebeb;
+            }
+
+
+            mark {
+                background: transparent;
+                font-weight: bold;
+            }
+
+        </style>
+    </head>
+
+
+
+    <body>
+        <h1>Weeee.js</h1>
+        <p>Tiny Javascript tweening engine.</p>
+
+
+
+        <div class='cube'>
+            <div class='eye'>&starf;</div>
+            <div class='eye'>&starf;</div>
+        </div>
+
+
+
+        <p><a href='https://github.com/sfi0zy/weeee'>Fork it on GitHub</a>!</p>
+
+
+
+        <pre><code>import <mark>Weeee</mark> from 'weeee.js';
+
+const cube = document.querySelector('.cube');
+const eyes = document.querySelectorAll('.eye');
+
+const <mark>showCube</mark> = new Weeee({
+    <mark>duration</mark>: 1000,
+    delay: 1000,
+    easing: Weeee.<mark>easeOutElastic</mark>,
+    func: (progress) => {
+        cube.style.transform = `scale(${<mark>progress</mark>})`;
+    },
+});
+
+const <mark>rotateEyes</mark> = new Weeee({
+    duration: <mark>Infinity</mark>,
+    delay: 1200,
+    func: (progress, <mark>details</mark>) => {
+        const rotation = details.<mark>delta</mark> / 10;
+
+        eyes[0].style.transform =`rotate(${-rotation}deg)`;
+        eyes[1].style.transform = `rotate(${rotation}deg)`;
+    },
+});</code></pre>
+
+
+
+        <p>Copyright &copy; Ivan Bogachev (@sfi0zy), 2021</p>
+
+
+
+        <script type='module'>
+
+            import Weeee from './weeee.js';
+
+            const cube = document.querySelector('.cube');
+            const eyes = document.querySelectorAll('.eye');
+
+            const showCube = new Weeee({
+                duration: 1000,
+                delay: 1000,
+                easing: Weeee.easeOutElastic,
+                func: (progress) => {
+                    cube.style.transform = `scale(${progress})`;
+                },
+            });
+
+            const rotateEyes = new Weeee({
+                duration: Infinity,
+                delay: 1200,
+                func: (progress, details) => {
+                    const rotation = details.delta / 10;
+
+                    eyes[0].style.transform = `rotate(${-rotation}deg)`;
+                    eyes[1].style.transform = `rotate(${rotation}deg)`;
+                },
+            });
+
+        </script>
+    </body>
+</html>
+
