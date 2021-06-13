@@ -90,6 +90,15 @@ const example = new Weeee({
 ```
 
 
+## CDN
+
+It's possible to import Weeee right from the unpkg:
+
+```javascript
+import Weeee from 'https://unpkg.com/weeee.js/weeee.js';
+```
+
+
 ## More examples
 
 Examples on CodePen:
