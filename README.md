@@ -1,4 +1,5 @@
 # Weeee.js
+![](https://img.shields.io/badge/version-1.0.2-brightgreen) ![](https://img.shields.io/badge/dependencies-0-brightgreen) ![](https://img.shields.io/badge/license-MIT-brightgreen)
 
 Tiny Javascript tweening engine.
 
