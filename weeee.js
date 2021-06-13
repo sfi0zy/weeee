@@ -84,7 +84,7 @@ export default class Weeee {
         this._options.direction = options.direction || Weeee.normal;
         this._options.loop      = options.loop      || false;
         this._options.loopDelay = options.loopDelay || 0;
-        this._options.autoplay  = options.autoplay  || true;
+        this._options.autoplay  = options.autoplay;
         this._options.fps       = options.fps       || 60;
         this._options.func      = options.func;
         this._options.callback  = options.callback;
