@@ -90,6 +90,13 @@ const example = new Weeee({
 ```
 
 
+## More examples
+
+Examples on CodePen:
+
+1. [Page loading](https://codepen.io/sfi0zy/pen/mdWQwzL)
+
+
 ## License
 
 MIT License
