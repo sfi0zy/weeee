@@ -105,6 +105,7 @@ import Weeee from 'https://unpkg.com/weeee.js/weeee.js';
 Examples on CodePen:
 
 1. [Page loading](https://codepen.io/sfi0zy/pen/mdWQwzL)
+2. [Spinner](https://codepen.io/sfi0zy/pen/bGqQMvN)
 
 
 ## License
