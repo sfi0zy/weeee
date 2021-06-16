@@ -125,6 +125,7 @@ const eyes = document.querySelectorAll('.eye');
 const <mark>showCube</mark> = new Weeee({
     <mark>duration</mark>: 1000,
     delay: 1000,
+    autoplay: true,
     easing: Weeee.<mark>easeOutElastic</mark>,
     func: (progress) => {
         cube.style.transform = `scale(${<mark>progress</mark>})`;
@@ -134,6 +135,7 @@ const <mark>showCube</mark> = new Weeee({
 const <mark>rotateEyes</mark> = new Weeee({
     duration: <mark>Infinity</mark>,
     delay: 1200,
+    autoplay: true,
     func: (progress, <mark>details</mark>) => {
         const rotation = details.<mark>delta</mark> / 10;
 
@@ -158,6 +160,7 @@ const <mark>rotateEyes</mark> = new Weeee({
             const showCube = new Weeee({
                 duration: 1000,
                 delay: 1000,
+                autoplay: true,
                 easing: Weeee.easeOutElastic,
                 func: (progress) => {
                     cube.style.transform = `scale(${progress})`;
@@ -167,6 +170,7 @@ const <mark>rotateEyes</mark> = new Weeee({
             const rotateEyes = new Weeee({
                 duration: Infinity,
                 delay: 1200,
+                autoplay: true,
                 func: (progress, details) => {
                     const rotation = details.delta / 10;
 
